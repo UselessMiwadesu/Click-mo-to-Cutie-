@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hey Soliel :3 💕</h1>
+    <p>I hope u feel better soon ≽^•⩊•^≼</p>
+
+    <div class="heart" onclick="toggleHeart()">❤️</div>
+    <p id="message">Click the heart for more exciting souprice charez ˙ᵕ˙</p>
+
+    <!-- Working GIF -->
+    <img id="cuteGif" src="fetchpik.com-b9vAUwKrtJ.gif" alt="Cute gif" class="cute-img">
+    
+  </div>
+
+  <script>
+    function toggleHeart() {
+      const heart = document.querySelector('.heart');
+      const message = document.getElementById('message');
+      const cuteGif = document.getElementById('cuteGif');
+
+      heart.classList.toggle('clicked');
+
+      if (heart.classList.contains('clicked')) {
+        message.textContent = "Souprice Posang nakadila, Keme Getwell Soon ≽^•⩊•^≼";
+        cuteGif.src = "posang nakadila.gif"; // new GIF when clicked
+      } else {
+        message.textContent = "Click the heart for more exciting souprice charez ˙ᵕ˙";
+        cuteGif.src = "fetchpik.com-b9vAUwKrtJ.gif"; // original GIF
+      }
+    }
+  </script>
+</body>
+</html>
